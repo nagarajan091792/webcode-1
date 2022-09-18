@@ -15,25 +15,23 @@ button.setAttribute("type","button");
 button.classList.add("btn","btn-primary");
 button.innerHTML="Search";
 button.addEventListener("click",foo);
-//product- brand name price link description 
-var brand1 = document.createElement("div");
-brand1.setAttribute("id","brand");
+//product- brand name price link description create in function
 
-var name1 = document.createElement("div");
-name1.setAttribute("id","name1 ");
-
-var price  = document.createElement("div");
-price .setAttribute("id","price ");
-
-var  product_link = document.createElement("div");
-product_link.setAttribute("id"," product_link");
-
-var description  = document.createElement("div");
-description .setAttribute("id","description ");
-
+function tags (tagname,attrname,attrvaule) {
+  var ele = document.createElement(tagname);
+  ele.setAttribute(attrname,attrvaule);
+  return ele;
+}
+var brand1 = tags("div","id","brand");
+var name1 = tags("div","id","name1");
+var price  = tags("div","id","price");
+var product_link = tags("div","id","product_link");
+var description  = tags("div","id","description");
 div.append(input,button,brand1,name1,price,product_link,description);
 
 document.body.append(div);
+
+
 
 
 async function foo() {
